@@ -16,18 +16,18 @@ const sequelize= new Sequelize({
     models: {}
   };
 
-  const dir = require(path.join(__dirname, 'models'));
- console.log(dir)
-  fs.readdirSync(dir).forEach(filename => {
-      console.log(fs.Dir)
-    const modelDir = require(path.join(dir, fileName))(sequelize, Sequelize.DataTypes)
-    const model = modelDir
-    db.models[model.name] = model;
-  });
+//   const dir = require(path.join(__dirname, 'models'));
+//  console.log(dir)
+//   fs.readdirSync(dir).forEach(filename => {
+//       console.log(fs.Dir)
+//     const modelDir = require(path.join(dir, fileName))(sequelize, Sequelize.DataTypes)
+//     const model = modelDir
+//     db.models[model.name] = model;
+//   });
   
-  Object.keys(db.models).forEach(key => {
-    db.models[key].associate(db.models);
-  });
+//   Object.keys(db.models).forEach(key => {
+//     db.models[key].associate(db.models);
+//   });
 }
  return db;
 }
